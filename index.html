@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+     <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a0845;
+  height: 100vh;
+}
+.container {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container span {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 5px;
+  background: #2c4766;
+  border-radius: 8px;
+  transform-origin: 128px;
+  transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+  animation: animate 3s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+@keyframes animate {
+  0% {
+    background: #0ef;
+  }
+  25% {
+    background: #2c4766;
+  }
+}
+.login-box {
+  position: absolute;
+  width: 400px;
+}
+.login-box form {
+  width: 100%;
+  padding: 0 50px;
+}
+h1 {
+  font-size: 2em;
+  color: #0ef;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  margin: 25px 0;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #2c4766;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 20px;
+  transition: 0.5s ease;
+}
+.input-box input:focus,
+.input-box input:focus {
+  border-color: #0ef;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s ease;
+  color: rgb(132, 187, 192);
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: 1px;
+  font-size: 0.8em;
+  background: #2a0845;
+  padding: 0 6px;
+  color: #0ef;
+}
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  color: #0ef;
+  background: #2a0845;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #0ef;
+  border-radius: 30px;
+  padding: 5px 30px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s, box-sahdow 1s;
+  margin-bottom: 10px;
+}
+.btn:hover {
+  transition-delay: 0s, 1s;
+  color: white;
+  box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef, 0 0 80px #0ef,
+    0 0 160px #0ef;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 0%;
+  height: 100%;
+  background: #0ef;
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: 1s;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+form .link-text {
+  margin: 15px;
+  color: rgb(236, 240, 241);
+  font-size: 0.85rem;
+  text-align: center;
+}
+form .link-text a {
+  text-decoration: none;
+  color: rgb(120, 184, 215);
+  font-weight: 700;
+}
+form .link-text a:hover {
+  text-decoration: underline;
+}
+
+     </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <p class="link-text">
+                    Forget password ?
+                    <a href="#">Click Here</a>
+                </p>
+    
+                <button type="submit" class="btn">Login</button>
+                
+                <p class="link-text">
+                    Creat a Account
+                    <a href="#">Click Here</a>
+                </p>
+                
+                
+            </form>
+        </div>
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+        <span style="--i:44;"></span>
+        <span style="--i:45;"></span>
+        <span style="--i:46;"></span>
+        <span style="--i:47;"></span>
+        <span style="--i:48;"></span>
+        <span style="--i:49;"></span>
+        
+        
+    </div>
+    
+</body>
